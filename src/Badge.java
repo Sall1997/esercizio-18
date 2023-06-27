@@ -4,7 +4,7 @@ public class Badge {
     public Employee employee;
 
 
-    Badge(Employee employeeThatNeedsBadge ){
+    public Badge(Employee employeeThatNeedsBadge ){
         keepTrackOfEmployeesNumber();
         employee = employeeThatNeedsBadge;
         generateBadgeIdCode();
@@ -15,7 +15,7 @@ public class Badge {
     }
 
    private void generateBadgeIdCode(){
-        badgeIdCode = "Badge: " + "XYZ" + employee.name + employee.surname + "ZYX.";
+        badgeIdCode = "Badge: " + "XYZ" + employee.getName() + employee.getSurname() + "ZYX.";
    }
 
    public void showBadgeDetails(){
